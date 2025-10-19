@@ -1,0 +1,120 @@
+/* Reset body background */
+body {
+  height: 100vh;
+  margin: 0;
+  background: #f8f9fa;
+}
+
+/* Header Gradient */
+.site-header {
+  background: #4a747d;
+  background: radial-gradient(
+    circle,
+    rgba(74, 116, 125, 1) 0%,
+    rgba(134, 179, 166, 1) 11%,
+    rgba(60, 98, 87, 1) 26%,
+    rgba(29, 36, 34, 1) 33%,
+    rgba(18, 64, 51, 1) 41%,
+    rgba(60, 98, 87, 1) 50%,
+    rgba(60, 98, 87, 1) 65%,
+    rgba(60, 98, 87, 1) 72%,
+    rgba(60, 98, 87, 1) 80%
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 20s ease infinite;
+}
+
+/* Main Gradient - ΔΙΟΡΘΩΜΕΝΟ */
+.main-gradient {
+  background: #4e555e;
+  background: linear-gradient(
+    217deg,
+    rgba(78, 85, 94, 1) 0%,
+    rgba(56, 55, 64, 1) 4%,
+    rgba(47, 47, 79, 1) 9%,
+    rgba(70, 70, 112, 1) 16%,
+    rgba(8, 8, 107, 1) 29%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(8, 40, 142, 1) 45%,
+    rgba(15, 44, 84, 1) 55%,
+    rgba(34, 84, 128, 1) 63%,
+    rgba(37, 93, 128, 1) 71%,
+    rgba(57, 102, 125, 1) 76%,
+    rgba(19, 68, 84, 1) 84%,
+    rgba(18, 40, 48, 1) 87%,
+    rgba(11, 83, 97, 1) 100%
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 15s ease infinite;
+  color: white;
+  flex: 1; /* Αυτό το κάνει να επεκτείνεται */
+  min-height: calc(100vh - 200px); /* Καλύπτει όλο το υπόλοιπο ύψος */
+}
+
+/* Κύριο περιεχόμενο */
+.main-content {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+/* Footer Gradient */
+.site-footer {
+  background: #4e555e;
+  background: linear-gradient(
+    190deg,
+    rgba(78, 85, 94, 1) 0%,
+    rgba(56, 55, 64, 1) 4%,
+    rgba(47, 47, 79, 1) 9%,
+    rgba(148, 99, 99, undefined) 2%,
+    rgba(87, 36, 36, 1) 25%,
+    rgba(92, 11, 11, 1) 37%,
+    rgba(166, 114, 114, 1) 58%,
+    rgba(74, 63, 63, 1) 67%
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 15s ease infinite;
+  color: white;
+  margin-top: auto;
+}
+
+/* Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Υπόλοιπα styles */
+header a {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Για να επεκτείνεται το footer στο κάτω μέρος */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
