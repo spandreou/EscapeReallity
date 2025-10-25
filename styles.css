@@ -625,3 +625,59 @@ body.activities-page .main-content {
     text-align: justify;
   }
 }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* επιτρέπει στα στοιχεία να πάνε σε 2η γραμμή */
+  gap: 0.5rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* ώστε τα κουμπιά να πάνε από κάτω αν δεν χωράνε */
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap; /* κρατάει τη λέξη ενιαία */
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
