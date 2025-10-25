@@ -737,3 +737,161 @@ body.activities-page .main-content {
     overflow-x: hidden;
   }
 }
+
+/* ====== HAMBURGER MENU CSS ====== */
+
+/* Απόκρυψη checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Εικονίδιο hamburger */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+  user-select: none;
+}
+
+/* Βασική διάταξη για desktop */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    background: #d9b887; /* ίδιο με το header */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Εμφάνιση μενού όταν πατηθεί το checkbox */
+  #menu-toggle:checked + .menu-icon + .main-nav ul {
+    display: flex;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 0.8rem;
+    border-radius: 0;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .main-nav a:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+  }
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    background: #d9b887;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1050;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  #menu-toggle:checked + .menu-icon + .main-nav ul {
+    display: flex;
+  }
+
+  .main-nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    color: #000;
+    padding: 0.8rem 0;
+  }
+
+  .main-nav a:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .main-content {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .main-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .main-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 0.8rem 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .site-title {
+    font-size: 1.2rem;
+  }
+
+  .menu-icon {
+    font-size: 1.8rem;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+
+  .main-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .main-content p {
+    font-size: 0.9rem;
+  }
+}
