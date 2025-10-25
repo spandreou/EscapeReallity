@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Escape Reality</title>
+
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
+  </head>
+
+  <body>
     <header class="site-header">
-        <div class="container">
-            <div class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-                <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                    <span class="fs-4">Personal Website</span>
-                </div>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link active" aria-current="page">Home</a>
-                    </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="header-inner">
+          <a href="index.html" class="logo">
+            <img
+              src="./images/escape-reallity-logo.svg"
+              alt="Logo"
+              width="90"
+              height="90"
+            />
+            <span class="site-title">Escape Reality</span>
+          </a>
+
+          <nav class="main-nav">
+            <ul>
+              <li><a href="./index.html" class="active">Home</a></li>
+              <li><a href="./activities.html">Δρασεις</a></li>
+              <li><a href="./events.html">Συναντησεις</a></li>
+              <li><a href="./information.html">Πληροφορίες</a></li>
+              <li><a href="./contacts.html">Επικοινωνία</a></li>
+            </ul>
+          </nav>
         </div>
+      </div>
     </header>
 
-    <main class="main-content main-gradient">
-        <div class="container">
-            <!-- Το κύριο περιεχόμενο της σελίδας σου εδώ -->
-            <h1 style="color: white;"></h1>
-            <p style="color: white;"></p>
+    <main class="main-content">
+      <div class="container">
+        <h1>Καλωσόρισες στο Escape Reality</h1>
+
+        <div class="carousel">
+          <img src="./images/photo1.png" alt="Φωτογραφία 1" class="slide" />
+          <img src="./images/photo2.png" alt="Φωτογραφία 2" class="slide" />
+          <img src="./images/photo3.png" alt="Φωτογραφία 3" class="slide" />
+          <img src="./images/photo4.png" alt="Φωτογραφία 4" class="slide" />
         </div>
+
+        <p class="intro-text">
+          Εδώ ξεκινά κάθε περιπέτεια. Μια ανάσα μακριά από τη ρουτίνα, εκεί που
+          η φύση και η ηρεμία σε καλούν να αποσυνδεθείς απ’ τον θόρυβο της πόλης
+          και να θυμηθείς ποιος είσαι πραγματικά.
+          <br /><br />
+          Το <strong>Escape Reality</strong> δεν είναι απλώς μια ομάδα· είναι
+          μια κοινότητα ανθρώπων που αναζητούν εμπειρίες, σύνδεση και ελευθερία.
+        </p>
+      </div>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="py-3 border-top">
-                <p class="text-center mb-0">© 2024 Personal Website. All rights reserved.</p>
-            </div>
-        </div>
+      <div class="container">
+        <p>© 2025 Escape Reality. All rights reserved.</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
