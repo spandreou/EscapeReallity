@@ -681,3 +681,59 @@ body.activities-page .main-content {
     overflow-x: hidden;
   }
 }
+
+
+/* ======= FINAL RESPONSIVE FIX ======= */
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  header, .site-header, .site-footer {
+    width: 100%;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 0.6rem 0;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .carousel {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
