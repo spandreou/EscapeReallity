@@ -3,12 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html,
 body {
   height: 100%;
 }
-
 body {
   display: flex;
   flex-direction: column;
@@ -17,45 +15,38 @@ body {
   background-color: #f8f9fa;
   color: #000;
 }
-
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
 }
-
 header {
   background-color: #d9b887;
   color: #000;
   padding: 0.2rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .logo {
   margin-right: auto;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .site-title {
   font-size: 1.5rem;
   font-weight: bold;
   color: #000;
 }
-
 .main-nav ul {
   list-style: none;
   display: flex;
   gap: 1.2rem;
 }
-
 .main-nav a {
   text-decoration: none;
   color: #000;
@@ -64,12 +55,10 @@ header {
   border-radius: 4px;
   transition: background 0.3s, color 0.3s;
 }
-
 .main-nav a:hover {
   background: rgba(0, 0, 0, 0.1);
   color: #333;
 }
-
 .main-content {
   flex: 1;
   padding: 2rem 0;
@@ -79,13 +68,11 @@ header {
   background-size: 400% 400%;
   animation: gradientMove 20s ease-in-out infinite;
 }
-
 .main-content h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #000;
 }
-
 .carousel {
   position: relative;
   width: 90%;
@@ -94,33 +81,28 @@ header {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 10px;
-  background-color: #1f2f1f; /* fallback background */
+  background-color: #1f2f1f; 
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
-
 .carousel .slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* γεμίζει όλο το πλαίσιο */
+  object-fit: cover; 
   opacity: 0;
   animation: fadeSlide 24s infinite;
   transition: opacity 1s ease-in-out;
 }
-
 .carousel .slide:nth-child(1) { animation-delay: 0s; }
 .carousel .slide:nth-child(2) { animation-delay: 6s; }
 .carousel .slide:nth-child(3) { animation-delay: 12s; }
 .carousel .slide:nth-child(4) { animation-delay: 18s; }
-
-
 .carousel:hover {
   transform: scale(1.1);
   transition: transform 0.8s ease-in-out;
 }
-
 @keyframes fadeSlide {
   0% { opacity: 0; }
   3% { opacity: 1; }
@@ -128,16 +110,6 @@ header {
   27% { opacity: 0; }
   100% { opacity: 0; }
 }
-
-
-
-@media (max-width: 768px) {
-  .carousel {
-    width: 100%;
-    height: 300px;
-  }
-}
-
 footer {
   background-color: #d9b887;
   color: #000;
@@ -147,7 +119,6 @@ footer {
   font-size: 0.9rem;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
-
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -159,13 +130,11 @@ footer {
     background-position: 0% 50%;
   }
 }
-
 body.activities-page .main-content {
   background: linear-gradient(135deg, #797057, #4e6f5b);
   background-size: 400% 400%;
   animation: gradientMove 25s ease-in-out infinite;
 }
-
 .quote {
   flex: auto;
   padding: 5rem;
@@ -177,7 +146,6 @@ body.activities-page .main-content {
   color: #161515;
   font-weight: bold;
 }
-
 .main-content p {
   max-width: 800px;
   margin: 1rem auto;
@@ -185,7 +153,6 @@ body.activities-page .main-content {
   line-height: 1.8;
   color: #111;
 }
-
 .main-content .quote {
   font-style: italic;
   text-align: center;
@@ -193,7 +160,6 @@ body.activities-page .main-content {
   color: #333;
   font-weight: 500;
 }
-
 .btn {
   display: inline-block;
   margin-top: 1.5rem;
@@ -205,18 +171,15 @@ body.activities-page .main-content {
   font-weight: bold;
   transition: background 0.3s;
 }
-
 .btn:hover {
   background: #c1a06b;
 }
-
 .activities {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   margin-top: 2rem;
 }
-
 .activity {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -228,12 +191,10 @@ body.activities-page .main-content {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .activity:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
-
 .activity-carousel {
   position: relative;
   width: 100%;
@@ -242,41 +203,29 @@ body.activities-page .main-content {
   border-radius: 10px;
   overflow: hidden;
 }
-
 .activity-carousel img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
 }
-
 .activity-carousel img:nth-child(1) {
   animation-delay: 0s;
 }
 .activity-carousel img:nth-child(2) {
   animation-delay: 5s;
 }
-
-@media (orientation: portrait) {
-  .activity-carousel img {
-    object-fit: contain;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-}
-
 .activity-text h2 {
   margin-bottom: 0.8rem;
   color: #f5f5dc;
   font-size: 1.6rem;
 }
-
 .activity-text p {
   color: #f1f1f1;
   font-size: 1rem;
   line-height: 1.6;
   max-width: 90%;
 }
-
 .quote {
   margin-top: 2rem;
   text-align: center;
@@ -285,17 +234,6 @@ body.activities-page .main-content {
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
-
-@media (max-width: 768px) {
-  .activity {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .activity-text p {
-    max-width: 100%;
-  }
-}
-
 .information-page {
   position: relative;
   min-height: 100vh;
@@ -305,7 +243,6 @@ body.activities-page .main-content {
   color: #252523;
   font-family: "Courier New", monospace;
 }
-
 @keyframes nightGlow {
   0% {
     background-position: 0% 50%;
@@ -314,7 +251,22 @@ body.activities-page .main-content {
     background-position: 100% 50%;
   }
 }
-
+.information-page {
+  min-height: auto;
+  padding-bottom: 2rem;
+}
+.information-page .main-content {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  min-height: auto;
+}
+.information-page p {
+  margin-bottom: 0.8rem;
+}
+.information-page h1 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
 .campfire {
   position: fixed;
   bottom: 100px;
@@ -326,19 +278,16 @@ body.activities-page .main-content {
   transition: opacity 0.5s ease;
   z-index: 10;
 }
-
 .campfire:hover {
   opacity: 1;
   box-shadow: 0 0 30px rgba(255, 100, 0, 0.6);
 }
-
 .information-page h1 {
   text-align: center;
   margin-top: 3rem;
   color: #ffe6b0;
   text-shadow: 0 0 12px rgba(255, 180, 50, 0.4);
 }
-
 .information-page p {
   max-width: 800px;
   margin: 1.2rem auto;
@@ -346,7 +295,6 @@ body.activities-page .main-content {
   line-height: 1.7;
   color: #ddd9c4;
 }
-
 .home-photo {
   display: block;
   margin: 1.5rem auto;
@@ -355,7 +303,6 @@ body.activities-page .main-content {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
-
 .intro-text {
   text-align: center;
   max-width: 700px;
@@ -369,20 +316,17 @@ body.activities-page .main-content {
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 .events-page .main-content {
   background: linear-gradient(160deg, #1d3520 0%, #263b25 50%, #354f38 100%);
   background-size: 300% 300%;
   animation: gradientMove 25s ease-in-out infinite;
   color: #eae6d9;
 }
-
 .events-page h1 {
   color: #f5e3a9;
   text-shadow: 0 0 12px rgba(245, 227, 169, 0.4);
   margin-bottom: 2rem;
 }
-
 .events-page h2 {
   color: #ffeeba;
   font-size: 1.3rem;
@@ -390,25 +334,21 @@ body.activities-page .main-content {
   margin-bottom: 0.8rem;
   text-shadow: 0 0 8px rgba(255, 235, 186, 0.2);
 }
-
 .events-page p {
-  color: #e6e3d2;
-  font-size: 1rem;
-  line-height: 1.6;
+  color: #f9f9f9;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 .events-page .quote {
-  color: rgba(230, 225, 200, 0.6);
-  font-style: italic;
+color: rgba(206 203 201 / 96%)  ; 
+font-style: italic;
   margin-top: 3rem;
   font-size: 1.05rem;
 }
-
 .information-page .main-content {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
 .contacts-page {
   position: relative;
   background: url("images/mountains.gif") center/cover no-repeat fixed;
@@ -416,10 +356,9 @@ body.activities-page .main-content {
   color: #fff;
   overflow: hidden;
   text-align: center;
-  padding: 2rem 0 3rem;
+  padding: 0% 0 3rem;
   animation: mediumPan ease-in-out infinite, fadeIn 2s ease-in forwards;
 }
-
 .contacts-page::before {
   content: "";
   position: absolute;
@@ -428,7 +367,6 @@ body.activities-page .main-content {
   backdrop-filter: blur(2px);
   z-index: 0;
 }
-
 .contacts-page .container,
 .contacts-page h1,
 .contacts-page .contact-form,
@@ -436,7 +374,6 @@ body.activities-page .main-content {
   position: relative;
   z-index: 1;
 }
-
 @keyframes slowPan {
   0% {
     background-position: center;
@@ -448,7 +385,6 @@ body.activities-page .main-content {
     background-position: center;
   }
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -457,17 +393,14 @@ body.activities-page .main-content {
     opacity: 1;
   }
 }
-
 .contacts-page h1 {
   color: #f5e3a9;
   text-shadow: 0 0 10px rgba(255, 220, 150, 0.4);
   margin-bottom: 1.8rem;
 }
-
 .social-section {
   margin-bottom: 2.5rem;
 }
-
 .social-link {
   display: inline-flex;
   align-items: center;
@@ -477,12 +410,10 @@ body.activities-page .main-content {
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .social-link:hover {
   transform: scale(1.05);
   color: #fff6d6;
 }
-
 .social-icon {
   width: 36px;
   height: 36px;
@@ -490,12 +421,10 @@ body.activities-page .main-content {
   opacity: 0.85;
   transition: opacity 0.3s ease, filter 0.3s ease;
 }
-
 .social-link:hover .social-icon {
   opacity: 1;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
-
 .contact-form {
   background: rgba(0, 0, 0, 0.2);
   padding: 1.2rem 1.8rem;
@@ -505,7 +434,6 @@ body.activities-page .main-content {
   text-align: left;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-
 .contact-form label {
   display: block;
   margin-bottom: 0.4rem;
@@ -514,7 +442,6 @@ body.activities-page .main-content {
   font-family: "Courier New", monospace;
   letter-spacing: 0.5px;
 }
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -527,13 +454,11 @@ body.activities-page .main-content {
   font-size: 0.95rem;
   font-family: "Courier New", monospace;
 }
-
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: rgba(240, 240, 240, 0.6);
   font-style: italic;
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
@@ -541,7 +466,6 @@ body.activities-page .main-content {
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
-
 .contact-form button {
   width: 100%;
   padding: 0.7rem;
@@ -555,13 +479,11 @@ body.activities-page .main-content {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
 }
-
 .contact-form button:hover {
   opacity: 1;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 }
-
 .logo {
   text-decoration: none;
   color: inherit;
@@ -569,81 +491,26 @@ body.activities-page .main-content {
   align-items: center;
   gap: 10px;
 }
-
 .logo:hover {
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
-
-/* ====== MOBILE RESPONSIVE FIX ====== */
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  header,
-  .site-header,
-  .site-footer {
-    width: 100%;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3rem;
-  }
-
-  .main-content {
-    width: 100%;
-    padding: 1.5rem 0.5rem;
-  }
-
-  .carousel {
-    width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .main-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .main-content p {
-    font-size: 1rem;
-    text-align: justify;
-  }
-}
-
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* επιτρέπει στα στοιχεία να πάνε σε 2η γραμμή */
+  flex-wrap: wrap; 
   gap: 0.5rem;
 }
-
 .main-nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* ώστε τα κουμπιά να πάνε από κάτω αν δεν χωράνε */
+  flex-wrap: wrap; 
   justify-content: center;
   padding: 0;
   margin: 0;
   gap: 0.5rem;
 }
-
 .main-nav a {
   text-decoration: none;
   color: #000;
@@ -651,110 +518,8 @@ body.activities-page .main-content {
   padding: 0.4rem 0.6rem;
   border-radius: 4px;
   transition: background 0.3s, color 0.3s;
-  white-space: nowrap; /* κρατάει τη λέξη ενιαία */
+  white-space: nowrap; 
 }
-
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main-nav a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.05);
-  }
-
-  .main-content {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-}
-
-
-/* ======= FINAL RESPONSIVE FIX ======= */
-@media (max-width: 900px) {
-  .container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  header, .site-header, .site-footer {
-    width: 100%;
-  }
-
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 0.5rem;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .main-nav a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    padding: 0.6rem 0;
-  }
-
-  .main-content {
-    width: 100%;
-    padding: 1.5rem 0.5rem;
-  }
-
-  .carousel {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-}
-
-/* ====== HAMBURGER MENU CSS ====== */
-
-/* Απόκρυψη checkbox */
-#menu-toggle {
-  display: none;
-}
-
-/* Εικονίδιο hamburger */
-.menu-icon {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #000;
-  user-select: none;
-}
-
-/* Βασική διάταξη για desktop */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -762,136 +527,29 @@ body.activities-page .main-content {
   margin: 0;
   padding: 0;
 }
-
-/* ----- RESPONSIVE ----- */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .main-nav ul {
-    display: none;
-    flex-direction: column;
-    background: #d9b887; /* ίδιο με το header */
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    text-align: center;
-    padding: 1rem 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Εμφάνιση μενού όταν πατηθεί το checkbox */
-  #menu-toggle:checked + .menu-icon + .main-nav ul {
-    display: flex;
-  }
-
-  .main-nav a {
-    display: block;
-    padding: 0.8rem;
-    border-radius: 0;
-    color: #000;
-    text-decoration: none;
-  }
-
-  .main-nav a:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
+body.information-page footer {
+  background-color: #d9b887;
+  color: #000;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 100;
 }
-
-@media (max-width: 900px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1100;
-  }
-
-  .main-nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 0;
-    background: #d9b887;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1050;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  #menu-toggle:checked + .menu-icon + .main-nav ul {
-    display: flex;
-  }
-
-  .main-nav a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: transparent;
-    color: #000;
-    padding: 0.8rem 0;
-  }
-
-  .main-nav a:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  .main-content {
-    padding: 1.5rem 0.5rem;
-  }
-
-  .main-content h1 {
-    font-size: 1.6rem;
-  }
-
-  .main-content p {
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
-
-  .main-content img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    padding: 0.8rem 0;
-  }
+body.information-page footer .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
-
-@media (max-width: 500px) {
-  .site-title {
-    font-size: 1.2rem;
-  }
-
-  .menu-icon {
-    font-size: 1.8rem;
-  }
-
-  .main-nav a {
-    font-size: 0.9rem;
-  }
-
-  .main-content h1 {
-    font-size: 1.4rem;
-  }
-
-  .main-content p {
-    font-size: 0.9rem;
-  }
+body.information-page footer p,
+body.information-page footer a {
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+body.information-page footer a:hover {
+  color: #333;
 }
