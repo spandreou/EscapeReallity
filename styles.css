@@ -1,19 +1,30 @@
+@font-face {
+  font-family: "NotoSansCondensed";
+  src: url("fonts/NotoSans_Condensed-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body,
-html {
-  height: 100%;
-}
+
+html,
 body {
   display: flex;
-  flex-direction: column;
-  font-family: "Courier New", Courier, monospace;
-  line-height: 1.6;
-  background-color: #f8f9fa;
-  color: #000;
+    flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "NotoSansCondensed", sans-serif;
+}
+main {
+  flex: 1;
 }
 .container {
   width: 90%;
@@ -196,6 +207,30 @@ body.activities-page .main-content {
   gap: 3rem;
   margin-top: 2rem;
 }
+.activity-list {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  color: #f1f1f1;
+  font-family: "Courier New", monospace;
+  line-height: 1.7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.activity-list li {
+  margin: 0.5rem 0;
+  list-style: "🥾 ";
+  transition: transform 0.2s ease;
+}
+
+.activity-list li:hover {
+  transform: translateX(6px);
+  color: #ffd36b;
+}
+
+
 .activity {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -534,21 +569,6 @@ body.information-page main {
   line-height: 1.7;
   color: #ddd9c4;
 }
-.campfire {
-  position: fixed;
-  bottom: 100px;
-  right: 40px;
-  width: 300px;
-  border-radius: 10px;
-  opacity: 0.85;
-  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
-  transition: opacity 0.5s ease, box-shadow 0.5s ease;
-  z-index: 10;
-}
-.campfire:hover {
-  opacity: 1;
-  box-shadow: 0 0 30px rgba(255, 100, 0, 0.6);
-}
 body.information-page footer {
   background-color: #d9b887;
   color: #000;
@@ -585,17 +605,10 @@ a.logo {
 a.logo:focus {
   outline: 0;
 }
-body,
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; 
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   border-radius: 12px;
@@ -629,7 +642,7 @@ html {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   max-width: 900px;
   margin: 0 auto;
@@ -652,26 +665,23 @@ html {
   opacity: 1;
 }
 
-
-
 @media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 0.6rem;
   }
-@media (max-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr); 
+  @media (max-width: 900px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-}
 
-@media (max-width: 600px) {
-  .gallery-grid {
-    grid-template-columns: 1fr; 
+  @media (max-width: 600px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
   }
-}
   .gallery-grid img {
     height: 140px;
   }
 }
-
