@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Spyros Andreou">
+  <meta name="description" content="Escape Reality: πεζοπορίες, εξορμήσεις και δράσεις στη φύση με κοινότητα και περιπέτεια.">
+  <meta name="keywords" content="escape reality, πεζοπορία, εξορμήσεις, δραστηριότητες φύσης, βουνό, camping">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:title" content="Escape Reality | Outdoor Παρέα και Περιπέτεια">
+  <meta property="og:description" content="Ανακάλυψε δράσεις στη φύση και έλα στην επόμενη εξόρμηση του Escape Reality.">
+  <meta property="og:image" content="./images/photo1.webp">
+  <meta name="theme-color" content="#496b4a">
+  <title>Escape Reality | Outdoor Παρέα και Περιπέτεια</title>
+  <link rel="preload" as="image" href="./images/photo1.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="index-page">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="./index.html" class="logo" aria-label="Escape Reality - Αρχική">
+          <img src="./images/escape-reallity-logo.svg" alt="Escape Reality Logo" width="90" height="90">
+          <span class="site-title">Escape Reality</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Μενού</button>
+        <nav id="primary-nav" class="main-nav" aria-label="Κύρια πλοήγηση">
+          <ul>
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./activities.html">Δράσεις</a></li>
+            <li><a href="./events.html">Συναντήσεις</a></li>
+            <li><a href="./information.html">Πληροφορίες</a></li>
+            <li><a href="./contacts.html">Επικοινωνία</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <section class="hero" aria-label="Κεντρικό μήνυμα">
+        <p class="hero__eyebrow">Outdoor Community in Greece</p>
+        <h1 class="hero__title">Βγες έξω, γνώρισε ανθρώπους, ζήσε εμπειρίες.</h1>
+        <p class="hero__lead">
+          Το Escape Reality φέρνει κοντά ανθρώπους που αγαπούν το βουνό, τη φύση
+          και τις πραγματικές στιγμές.
+        </p>
+        <div class="hero__actions">
+          <a href="./events.html" class="btn">Δες την επόμενη συνάντηση</a>
+          <a href="./contacts.html" class="btn btn--secondary">Μίλα μαζί μας</a>
+        </div>
+      </section>
+
+      <div class="carousel" aria-label="Στιγμές από τις δράσεις μας">
+        <img src="./images/photo1.webp" alt="Ορεινή θέα στη φύση" class="slide" fetchpriority="high">
+        <img src="./images/photo2.jpg" alt="Δραστηριότητα ομάδας σε μονοπάτι" class="slide" loading="lazy" decoding="async">
+        <img src="./images/photo3.webp" alt="Εξόρμηση σε φυσικό τοπίο" class="slide" loading="lazy" decoding="async">
+        <img src="./images/photo4.webp" alt="Στιγμή από συνάντηση Escape Reality" class="slide" loading="lazy" decoding="async">
+      </div>
+
+      <section class="quick-stats" aria-label="Γρήγορη εικόνα">
+        <article class="quick-stats__item">
+          <h2>20+</h2>
+          <p>Δράσεις στη φύση</p>
+        </article>
+        <article class="quick-stats__item">
+          <h2>5</h2>
+          <p>Περιοχές εξερεύνησης</p>
+        </article>
+        <article class="quick-stats__item">
+          <h2>1 κοινότητα</h2>
+          <p>Με κοινό ρυθμό</p>
+        </article>
+      </section>
+
+      <p class="intro-text">
+        Εδώ ξεκινά κάθε περιπέτεια. Μια ανάσα μακριά από τη ρουτίνα, εκεί που
+        η φύση και η ηρεμία σε καλούν να αποσυνδεθείς απ' τον θόρυβο της πόλης
+        και να θυμηθείς ποιος είσαι πραγματικά.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Escape Reality. All rights reserved.</p>
+    </div>
+    <p style="text-align: right; margin-right: 1em; font-style: italic; font-size: 0.9rem; margin-top: 0.8rem;">
+      Design by <a href="https://github.com/spandreou" target="_blank" rel="noopener noreferrer" style="color: #131212;">spandreou</a>
+    </p>
+  </footer>
+  <script src="./main.js" defer></script>
+</body>
+</html>
