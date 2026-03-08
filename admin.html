@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Escape Reality | Admin</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./admin.css">
+</head>
+<body class="admin-page">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="./index.html" class="logo" aria-label="Escape Reality - Αρχική">
+          <img src="./images/escape-reallity-logo.svg" alt="Escape Reality Logo" width="90" height="90">
+          <span class="site-title">Escape Reality</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Μενού</button>
+        <nav id="primary-nav" class="main-nav" aria-label="Κύρια πλοήγηση">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./activities.html">Δράσεις</a></li>
+            <li><a href="./events.html">Συναντήσεις</a></li>
+            <li><a href="./information.html">Πληροφορίες</a></li>
+            <li><a href="./contacts.html">Επικοινωνία</a></li>
+            <li><a href="./admin.html" class="active">Admin</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <section id="admin-login-card" class="admin-card">
+        <h1>Admin Login</h1>
+        <p>Προεπιλεγμένα: <code>admin</code> / <code>escape2026</code></p>
+        <form id="admin-login-form" class="admin-form">
+          <label for="admin-username">Username</label>
+          <input id="admin-username" name="username" type="text" required>
+          <label for="admin-password">Password</label>
+          <input id="admin-password" name="password" type="password" required>
+          <button type="submit" class="btn">Log in</button>
+        </form>
+        <p id="admin-login-status" class="admin-status"></p>
+      </section>
+
+      <section id="admin-dashboard" class="admin-dashboard" hidden>
+        <div class="admin-dashboard__top">
+          <h1>Διαχείριση Περιεχομένου</h1>
+          <div class="admin-dashboard__actions">
+            <button id="save-all-btn" type="button" class="btn">Αποθήκευση</button>
+            <button id="reset-all-btn" type="button" class="btn btn--ghost">Reset Defaults</button>
+            <button id="admin-logout-btn" type="button" class="btn btn--secondary">Log out</button>
+          </div>
+        </div>
+
+        <section class="admin-card">
+          <h2>Αρχική Σελίδα</h2>
+          <form id="home-form" class="admin-form">
+            <label for="home-eyebrow">Eyebrow</label>
+            <input id="home-eyebrow" type="text">
+            <label for="home-title">Τίτλος</label>
+            <input id="home-title" type="text">
+            <label for="home-lead">Lead</label>
+            <textarea id="home-lead" rows="2"></textarea>
+            <label for="home-intro">Intro κείμενο</label>
+            <textarea id="home-intro" rows="4"></textarea>
+            <button type="submit" class="btn">Αποθήκευση Αρχικής</button>
+          </form>
+        </section>
+
+        <section class="admin-card">
+          <h2>Δράσεις</h2>
+          <form id="activity-form" class="admin-form">
+            <p id="activity-edit-state" class="admin-edit-state">Mode: Νέα δράση</p>
+            <input id="activity-id" type="hidden">
+            <label for="activity-title">Τίτλος</label>
+            <input id="activity-title" type="text" required>
+            <label for="activity-description">Περιγραφή</label>
+            <textarea id="activity-description" rows="4" required></textarea>
+            <label for="activity-badges">Badges (χωρισμένα με κόμμα)</label>
+            <input id="activity-badges" type="text" placeholder="Επίπεδο: Μέτριο, Διάρκεια: 4 ώρες">
+            <label for="activity-image-1">Image URL 1</label>
+            <input id="activity-image-1" type="text">
+            <label for="activity-image-file-1">ή Upload Image 1</label>
+            <input id="activity-image-file-1" type="file" accept="image/*">
+            <label for="activity-image-2">Image URL 2</label>
+            <input id="activity-image-2" type="text">
+            <label for="activity-image-file-2">ή Upload Image 2</label>
+            <input id="activity-image-file-2" type="file" accept="image/*">
+            <div class="admin-preview-grid">
+              <figure class="admin-preview">
+                <img id="activity-preview-1" alt="Preview image 1" hidden>
+                <figcaption id="activity-preview-cap-1">No image preview</figcaption>
+              </figure>
+              <figure class="admin-preview">
+                <img id="activity-preview-2" alt="Preview image 2" hidden>
+                <figcaption id="activity-preview-cap-2">No image preview</figcaption>
+              </figure>
+            </div>
+            <button type="submit" class="btn">Αποθήκευση Δράσης</button>
+          </form>
+          <div id="activity-list-admin" class="admin-list"></div>
+        </section>
+
+        <section class="admin-card">
+          <h2>Συναντήσεις</h2>
+          <form id="upcoming-form" class="admin-form">
+            <label for="upcoming-label">Upcoming Label</label>
+            <input id="upcoming-label" type="text">
+            <label for="upcoming-title">Upcoming Title</label>
+            <input id="upcoming-title" type="text">
+            <label for="upcoming-description">Upcoming Description</label>
+            <textarea id="upcoming-description" rows="3"></textarea>
+            <label for="upcoming-badges">Upcoming Badges (με κόμμα)</label>
+            <input id="upcoming-badges" type="text">
+            <button type="submit" class="btn">Αποθήκευση Upcoming</button>
+          </form>
+
+          <form id="event-form" class="admin-form">
+            <p id="event-edit-state" class="admin-edit-state">Mode: Νέο event</p>
+            <input id="event-id" type="hidden">
+            <label for="event-title">Τίτλος Event</label>
+            <input id="event-title" type="text" required>
+            <label for="event-description">Περιγραφή Event</label>
+            <textarea id="event-description" rows="3" required></textarea>
+            <label for="event-badges">Badges (με κόμμα)</label>
+            <input id="event-badges" type="text">
+            <button type="submit" class="btn">Αποθήκευση Event</button>
+          </form>
+          <div id="event-list-admin" class="admin-list"></div>
+        </section>
+
+        <section class="admin-card">
+          <h2>Πληροφορίες</h2>
+          <form id="info-form" class="admin-form">
+            <label for="info-title">Τίτλος</label>
+            <input id="info-title" type="text">
+            <label for="info-p1">Παράγραφος 1</label>
+            <textarea id="info-p1" rows="4"></textarea>
+            <label for="info-p2">Παράγραφος 2</label>
+            <textarea id="info-p2" rows="4"></textarea>
+            <button type="submit" class="btn">Αποθήκευση Πληροφοριών</button>
+          </form>
+        </section>
+
+        <section class="admin-card">
+          <h2>Gallery Φωτογραφίες + Περιγραφή</h2>
+          <form id="gallery-form" class="admin-form">
+            <p id="gallery-edit-state" class="admin-edit-state">Mode: Νέα φωτογραφία</p>
+            <input id="gallery-id" type="hidden">
+            <label for="gallery-caption">Περιγραφή κάτω από φωτογραφία</label>
+            <input id="gallery-caption" type="text" required>
+            <label for="gallery-image-url">Image URL</label>
+            <input id="gallery-image-url" type="text">
+            <label for="gallery-image-file">ή Upload εικόνας</label>
+            <input id="gallery-image-file" type="file" accept="image/*">
+            <figure class="admin-preview admin-preview--single">
+              <img id="gallery-preview" alt="Gallery preview" hidden>
+              <figcaption id="gallery-preview-cap">No image preview</figcaption>
+            </figure>
+            <button type="submit" class="btn">Αποθήκευση Φωτογραφίας</button>
+          </form>
+          <div id="gallery-list-admin" class="admin-list admin-gallery-list"></div>
+        </section>
+
+        <p id="admin-save-status" class="admin-status"></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="./cms-store.js"></script>
+  <script src="./main.js" defer></script>
+  <script src="./admin.js" defer></script>
+</body>
+</html>

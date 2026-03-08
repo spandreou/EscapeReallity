@@ -21,6 +21,7 @@ The project is built with plain:
 - `events.html` - Event timeline + upcoming event section
 - `information.html` - Story + photo gallery (with lightbox)
 - `contacts.html` - Contact form + Instagram fallback
+- `admin.html` - Admin dashboard (login/logout + content management)
 
 ## Features
 
@@ -31,6 +32,7 @@ The project is built with plain:
 - Gallery lightbox (keyboard support: `Esc`, arrow keys)
 - Contact form status messaging and fallback behavior
 - SEO-friendly meta tags and Open Graph tags
+- Admin dashboard for editing cards/content and managing gallery photos
 
 ## Project Structure
 
@@ -43,6 +45,11 @@ EscapeReallity-main/
 ├─ events.html
 ├─ information.html
 ├─ contacts.html
+├─ admin.html
+├─ admin.css
+├─ cms-store.js
+├─ cms-public.js
+├─ admin.js
 ├─ styles.css
 ├─ main.js
 └─ UPCOMING_UPDATES.md
@@ -70,6 +77,17 @@ Current/target hosting workflow:
 - Hosting via **Vercel** (planned/ongoing)
 
 See [UPCOMING_UPDATES.md](./UPCOMING_UPDATES.md) for next planned improvements.
+
+## Admin Access
+
+- Admin panel URL: `./admin.html`
+- Default credentials:
+  - Username: `admin`
+  - Password: `escape2026`
+
+Important:
+- Current admin/content layer is based on browser storage (`localStorage`) for quick management before full backend hosting.
+- For production-grade security and multi-user persistence, migrate to a real backend (Auth + DB + Storage).
 
 ## Author
 

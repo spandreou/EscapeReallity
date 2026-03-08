@@ -517,6 +517,13 @@ body.information-page .main-content p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.gallery-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
 .gallery-grid img {
   width: 100%;
   height: 190px;
@@ -530,6 +537,13 @@ body.information-page .main-content p {
 .gallery-grid img:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-item figcaption {
+  text-align: left;
+  font-size: 0.86rem;
+  color: #e5dcc5;
+  line-height: 1.4;
 }
 
 body.contacts-page .main-content.contacts-page {
